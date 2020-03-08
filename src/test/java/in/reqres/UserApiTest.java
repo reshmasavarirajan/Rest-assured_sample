@@ -32,7 +32,7 @@ public class UserApiTest {
 	 */
 	@Test
 	public void createUserTest() {
-		RestAssured.baseURI = "https://reqres.in/api/users/";
+	    RestAssured.baseURI = "https://reqres.in/api/users/";
 	    RequestSpecification httpRequest = RestAssured.given();
 	    JSONObject updateUser = new JSONObject();
 	    updateUser.put("first_name","Kate");
