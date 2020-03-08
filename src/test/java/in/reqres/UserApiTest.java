@@ -17,14 +17,14 @@ public class UserApiTest {
 	 */
 	@Test
 	public void getUserTest() {
-		RestAssured.baseURI = "https://reqres.in/api/users/";
-		RequestSpecification httpRequest = RestAssured.given();
-		Response response = httpRequest.request(Method.GET,"2");
-		JsonPath jsonResponse = response.jsonPath();
-		String name =  jsonResponse.get("data.first_name");
-		Assert.assertEquals(name,"Janet");
-		int statusCode = response.getStatusCode();
-		Assert.assertEquals(statusCode,200);
+	    RestAssured.baseURI = "https://reqres.in/api/users/";
+	    RequestSpecification httpRequest = RestAssured.given();
+	    Response response = httpRequest.request(Method.GET,"2");
+	    JsonPath jsonResponse = response.jsonPath();
+	    String name =  jsonResponse.get("data.first_name");
+	    Assert.assertEquals(name,"Janet");
+	    int statusCode = response.getStatusCode();
+	    Assert.assertEquals(statusCode,200);
 	}
 	
 	/**
